@@ -1,14 +1,14 @@
-#ifndef Features_h
-#define Features_h
+#ifndef Features
+#define Features
 
-void load_soil_data(void);
-void state_list(void);
-void recommend(void);
+void LoadSoilData(void);
+void StateList(void);
+void Recommend(void);
 
-void load_cost(void);
-void profit(void);
+void LoadCost(void);
+void Profit(void);
 
-void schemes(void);
+void Schemes(void);
 
 #endif
 
