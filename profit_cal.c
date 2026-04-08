@@ -3,12 +3,18 @@ void calculateProfit(void) {
     printf("\n  PROFIT CALCULATOR\n");
 
     while (1) {
-        int cropIndex = chooseCrop();
+        // int cropIndex = chooseCrop();
         
-        if (cropIndex == -1) return;
-        if (cropIndex == -2) continue;
+        // if (cropIndex == -1) return;
+        // if (cropIndex == -2) continue;
+        take_crop();
+        char *name[60];
+        cropIndex=hash(name);
 
-        CropCost crop = cost_db[cropIndex];
+        cost crop;
+        crop = crop_array[cropIndex];
+            
+        
 
         printf("\n  Enter land area (in acres): ");
         int inputCheck = scanf("%f", &area);
@@ -23,16 +29,16 @@ void calculateProfit(void) {
 
         clearInputBuffer();
 
-        float seedCostTotal = crop.seed_cost * area;
-        float farmingCostTotal = crop.cultivation_cost * area;
+        float seedCostTotal = crop.seedcost * area;
+        float farmingCostTotal = crop.epenses * area;
         float totalCost = seedCostTotal + farmingCostTotal;
 
-        float totalProduction = crop.yield_per_acre * area;
+        float totalProduction = crop.yield * area;
 
         float revenueMSP = totalProduction * crop.msp;
         float profitMSP = revenueMSP - totalCost;
 
-        float revenueMarket = totalProduction * crop.market_price;
+        float revenueMarket = totalProduction * crop.sellingPrice;
         float profitMarket = revenueMarket - totalCost;
 
         printf("\n  PROFIT REPORT: %s | %.1f Acres\n", crop.crop, area);
