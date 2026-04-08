@@ -84,3 +84,12 @@ void showStates(void) {
         printf("  %2d. %s\n", i + 1, state[i]);
     printf("  0. Go back\n");
 }
+
+void ShowCrops(void) {
+printf("\nAvailable crops:\n");
+for(int i=0;i<Costcount;i++){
+    printf("%2d.%-14s",i+1,Costdata[i].crop);
+    if((i+1)%4==0) printf("\n");
+}
+if(Costcount%4!=0) printf("\n");
+}
