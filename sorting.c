@@ -48,5 +48,5 @@ int soil_count=0;
 
       int index = hash(d.city);
       soil_db[index]=d;
-    }
+    }}
     fclose(fp);
