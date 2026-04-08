@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -70,13 +69,7 @@ int soil_count=0;
     }
 
       int index = hash(d.city);
-      while(hash_table[index]!=NULL)
-      index=(index+1)%100;
-      if(hash_table[index]==NULL)
-      {
-      soil_array[index]= d;
-      *hash_table[index]= &soil_array[index];
-      }
-      
+      soil_db[index]=d;
     }
     fclose(fp);
+}
