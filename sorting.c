@@ -9,7 +9,7 @@ soilData *hash_table[100];
 
 unsigned int hash(char *name)
 {
-  int length=strlen(name,20);
+  int length=strlen(name);
   unsigned int hash_value=0;
   int c;
   for(int i=0;i<length;i++)
