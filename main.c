@@ -22,9 +22,9 @@ int MainMenu(void){
 
 int main(void){
 
-LoadSoilData();
+
 StateList();
-LoadCost();
+
 
 SortedPrice(Costdata,Costcount);
 while(1){
