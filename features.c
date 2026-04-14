@@ -17,7 +17,7 @@ void schemes(void) {
     }
     printf("\n");
     fclose(fp);
-    press_enter();
+    waitforenter();
 }
 
 void trim(char *s) {
@@ -26,12 +26,12 @@ void trim(char *s) {
         s[--len] = '\0';
 }
 
-void flushInput(void) {
+void flush_input(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }   
 
-void pressEnter(void) {
+void waitforenter(void) {
     printf("\nPress [Enter] to continue...");
     flush_input();
 }
@@ -58,7 +58,7 @@ void SateList(void) {
             }
 }
 
-int SelectCrop(void) {
+int selectcrop(void) {
     int n;
     ShowCrops();
     printf("Enter crop number:");
@@ -144,7 +144,7 @@ void feature_crop_recommendation(void) {
             if (ci == -1) break;
             if (ci == -2) continue;
             display_crop_report(ci);
-            press_enter();
+             waitforenter();
         }
     }
 }
